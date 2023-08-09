@@ -8,7 +8,7 @@ class report(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="신고",description="화재 신고는 돌핀소방청")
-    async def reports(self,interaction: discord.Interaction) -> None:
+    async def reports(self,interaction: discord.Interaction,사고위치:str) -> None:
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick
@@ -21,7 +21,7 @@ class report(commands.Cog):
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
             embed.set_author(name="")
             embed.add_field(name=":fire_engine:돌핀의 소방은:fire_engine:", value="돌핀소방청이 책임집니다", inline=False)
-            embed.add_field(name="사진과 좌표는 따로 올려주십시오",value="이 명령어는 소방관이 잠수 혹은 \n부재중 일 경우 사용해주십시오 \n 과다 사용시 |**이용금지**| 처리 될수도 있습니다!", inline=False)
+            embed.add_field(name="사고위치: "+사고위치,value="", inline=False)
             embed.set_footer(text="소방청 관련 문의는 chilsung5#0")
             await interaction.response.send_message(('<@&1132891083148374067>'),embed=embed)
             print(user_name+"님이 신고를 하였습니다")
