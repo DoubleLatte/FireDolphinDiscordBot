@@ -4,8 +4,7 @@ from discord import Interaction
 from discord import Object
 import discord
 import datetime
-now = datetime.datetime.now()
-time = now.strftime('%Y-%m-%d %H:%M:%S')
+
 
 class out(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
@@ -13,6 +12,8 @@ class out(commands.Cog):
 
     @app_commands.command(name="퇴근",description="퇴근 도장 찍기")  
     async def outs(self, interaction: Interaction) -> None:
+        now = datetime.datetime.now()
+        time = now.strftime('%Y-%m-%d %H:%M:%S')
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick 
