@@ -4,8 +4,7 @@ from discord import Interaction
 from discord import Object
 import discord
 import datetime
-now = datetime.datetime.now()
-time = now.strftime('%Y-%m-%d %H:%M:%S')
+
 
 class out(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
@@ -17,6 +16,8 @@ class out(commands.Cog):
         user_name = interaction.user.name
         user_nick = interaction.user.nick 
         user_role = str(interaction.user.roles)
+        now = datetime.datetime.now()
+        time = now.strftime('%Y-%m-%d %H:%M:%S')
         
         if "1094245109199028280" in user_role or "1132891083148374067" in user_role:
             time = now.strftime('%Y-%m-%d %H:%M:%S')
