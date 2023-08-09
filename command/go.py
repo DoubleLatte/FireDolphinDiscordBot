@@ -4,7 +4,7 @@ from discord import Interaction
 from discord import Object
 import discord
 import datetime
-now = datetime.datetime.now()
+
 
 class go(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
@@ -17,7 +17,8 @@ class go(commands.Cog):
         user_nick = interaction.user.nick
         user_role = str(interaction.user.roles)
         
-        if "1094245109199028280" in user_role or "1132891083148374067" in user_role:        
+        if "1094245109199028280" in user_role or "1132891083148374067" in user_role:
+            now = datetime.datetime.now()        
             time = now.strftime('%Y-%m-%d %H:%M:%S')
             embed=discord.Embed(title=":fire_engine: **"+user_nick +"** 님의 출근시간", color=0x1b67e0)
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
