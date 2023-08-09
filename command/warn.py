@@ -6,12 +6,12 @@ import discord
 import datetime
 
 
-class out(commands.Cog):
+class warn(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
     @app_commands.command(name="퇴근",description="퇴근 도장 찍기")  
-    async def outs(self, interaction: Interaction) -> None:
+    async def warn(self, interaction: Interaction) -> None:
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick 
@@ -21,7 +21,7 @@ class out(commands.Cog):
         
         if "1094245109199028280" in user_role or "1132891083148374067" in user_role:
             time = now.strftime('%Y-%m-%d %H:%M:%S')
-            embed=discord.Embed(title=":fire_engine: **"+user_nick +"** 님의 퇴근시간", color=0xb1daf5)
+            embed=discord.Embed(title=":fire_engine: **"+user_nick +"** 님의 퇴근시간", color=0xFF0000)
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
             embed.set_author(name="")
             embed.add_field(name="**"+time+"**",value="", inline=False)
@@ -34,5 +34,5 @@ class out(commands.Cog):
 
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(
-        out(bot)
+        warn(bot)
     )
