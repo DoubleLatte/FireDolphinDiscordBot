@@ -6,12 +6,12 @@ import discord
 import datetime
 
 
-class out(commands.Cog):
+class suport(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
     @app_commands.command(name="지원",description="돌핀 최강 소방청 지원하기")  
-    async def outs(self, interaction: Interaction,닉네임:str,나이:str,지원동기:str) -> None:
+    async def suport(self, interaction: Interaction,닉네임:str,나이:str,지원동기:str) -> None:
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick 
@@ -39,5 +39,5 @@ class out(commands.Cog):
 
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(
-        out(bot)
+        suport(bot)
     )
