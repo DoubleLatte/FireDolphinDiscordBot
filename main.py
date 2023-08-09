@@ -23,7 +23,8 @@ class MyBot(commands.Bot):
             "command.huga",
             "command.info",
             "command.send",
-            "command.post"
+            "command.post",
+            "command.suport"
         ]
 
     async def setup_hook(self):
