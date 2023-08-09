@@ -24,6 +24,7 @@ class hello(commands.Cog):
             embed.set_author(name="")
             embed.add_field(name="휴가일정:", value=휴가기간, inline=False)
             embed.add_field(name="휴가사유:", value=휴가사유, inline=False)
+            embed.set_footer(text="위 사유에 의해 휴가를 신청 합니다.")
             await interaction.response.send_message("<@!"+user_id+">",embed=embed)
             print(user_name + ' 휴가 사용')
 
