@@ -19,7 +19,7 @@ class make(commands.Cog):
         
         if "1094245109199028280" in user_role or "1132891083148374067" in user_role:        
             time = now.strftime('%Y-%m-%d %H:%M:%S')
-            embed=discord.Embed(title="**"+user_nick +"** 님의 재료 내역", color=0x1b67e0)
+            embed=discord.Embed(title="**"+user_nick +"** 님의 재료 내역", color=0x7f83ff)
             embed.set_thumbnail(url=이미지)
             embed.set_author(name="")
             embed.add_field(name="**제조자: **"+ user_nick ,value="", inline=False)
