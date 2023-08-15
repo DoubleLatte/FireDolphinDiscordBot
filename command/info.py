@@ -19,9 +19,9 @@ class info(commands.Cog):
         embed=discord.Embed(title="NAME: 소방청 봇", color=0x9ADFB0)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
         embed.set_author(name="")
-        embed.add_field(name="봇 버전", value="2.8.9", inline=True)
+        embed.add_field(name="봇 버전", value="0.0.2B", inline=True)
         embed.add_field(name="개발자", value="DDLATTE", inline=False)
-        embed.set_footer(text="봇 관련 문의는 doublelatte#0 \n 소방청봇은 DDLATTE의 소유이며 \n 개발자의 상황에 따라 정지 또는 삭제 될 수 있습니다.")
+        embed.set_footer(text="봇 관련 문의는 doublelatte#0")
         await interaction.response.send_message(embed=embed)
         print(user_name+"님이 조회 하였습니다")
 

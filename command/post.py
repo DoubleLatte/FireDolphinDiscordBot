@@ -9,11 +9,11 @@ now = datetime.datetime.now()
 time = now.strftime('%Y-%m-%d %H:%M:%S')
 
 class post(commands.Cog):
-    def __init__(self, bot: commands.Bot) -> None:
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
 
     @app_commands.command(name="공지",description="공지용 명령어")  
-    async def post(self, interaction: Interaction,공지명:str,내용:str) -> None:
+    async def post(self, interaction: Interaction,공지명:str,내용:str):
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick 
