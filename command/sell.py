@@ -19,7 +19,7 @@ class sell(commands.Cog):
         
         if "1094245109199028280" in user_role or "1132891083148374067" in user_role:        
             time = now.strftime('%Y-%m-%d %H:%M:%S')
-            embed=discord.Embed(title="**"+user_nick +"** 님의 판매 내역", color=0x1b67e0)
+            embed=discord.Embed(title="**"+user_nick +"** 님의 판매 내역", color=0xd6ff7f)
             embed.set_thumbnail(url=이미지)
             embed.set_author(name="")
             embed.add_field(name="**구매자: **"+ 구매자 ,value="", inline=False)
