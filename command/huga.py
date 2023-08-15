@@ -19,7 +19,7 @@ class hello(commands.Cog):
         user_role = str(interaction.user.roles)
         
         if "1094245109199028280" in user_role or "1132891083148374067" in user_role:        
-            embed=discord.Embed(title=""+user_nick+"님의 소방청 휴가 신청 하는중", color=0xFF0000)
+            embed=discord.Embed(title=""+user_nick+"님의 소방청 휴가 신청 하는중", color=0x00bbff)
             embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
             embed.set_author(name="")
             embed.add_field(name="휴가일정:", value=휴가기간, inline=False)
