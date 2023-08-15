@@ -16,7 +16,7 @@ class info(commands.Cog):
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick
-        embed=discord.Embed(title="NAME: 소방청 봇", color=0x9ADFB0)
+        embed=discord.Embed(title="NAME: 소방청 봇", color=0x7fff92)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
         embed.set_author(name="")
         embed.add_field(name="봇 버전", value="0.0.2B", inline=True)
