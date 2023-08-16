@@ -21,7 +21,7 @@ class info(commands.Cog):
         embed.set_author(name="")
         embed.add_field(name="봇 버전", value="3.9.4", inline=True)
         embed.add_field(name="개발자", value="DDLATTE", inline=False)
-        embed.set_footer(text="봇 관련 문의는 doublelatte#0")
+        embed.set_footer(text="봇 관련 문의는 doublelatte#0 \n 본 봇은 개발자의 사정에 따라 \n 서버스 종료 혹은 중지 될 수 있습니다")
         await interaction.response.send_message(embed=embed)
         print(user_name+"님이 조회 하였습니다")
 
