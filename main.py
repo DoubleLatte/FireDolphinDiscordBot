@@ -28,7 +28,7 @@ class MyBot(commands.Bot):
             "command.warn",
             "command.sell",
             "command.make",
-            "command.check
+            "command.check"
         ]
 
     async def setup_hook(self):
