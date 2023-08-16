@@ -19,7 +19,7 @@ class info(commands.Cog):
         embed=discord.Embed(title="NAME: 소방청 봇", color=0x7fff92)
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1133079804250431540/1135882626201288755/-_-009.png")
         embed.set_author(name="")
-        embed.add_field(name="봇 버전", value="0.0.2B", inline=True)
+        embed.add_field(name="봇 버전", value="3.9.4", inline=True)
         embed.add_field(name="개발자", value="DDLATTE", inline=False)
         embed.set_footer(text="봇 관련 문의는 doublelatte#0")
         await interaction.response.send_message(embed=embed)
