@@ -11,7 +11,7 @@ class check(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="재고정리",description="재고 장부 적기 사진은 패더클 업로드로 추가")  
-    async def check(self, interaction: Interaction,이미지:str,수량:str,금액:str,직업:str) -> None:
+    async def check(self, interaction: Interaction,이미지:str,재고:str,특이사항:str) -> None:
         user_id = str (interaction.user.id)
         user_name = interaction.user.name
         user_nick = interaction.user.nick
@@ -22,9 +22,8 @@ class check(commands.Cog):
             embed=discord.Embed(title="**"+user_nick +"** 님의 재고 정리", color=0xd6ff7f)
             embed.set_thumbnail(url=이미지)
             embed.set_author(name="")
-            embed.add_field(name="**재고 수량: **"+ 수량,value="", inline=False)
-            embed.add_field(name="**판매 이익: **"+ 금액,value="", inline=False)
-            embed.add_field(name="**구매자 직업: **"+ 직업,value="", inline=False) 
+            embed.add_field(name="**재고 수량: **"+ 재고,value="", inline=False)
+            embed.add_field(name="**특이사항: **"+ 특이사항,value="", inline=False)
             await interaction.response.send_message(embed=embed)
 
         else:
